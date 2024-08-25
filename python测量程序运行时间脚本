@@ -1,0 +1,21 @@
+import time 
+import os
+import sys
+
+def main(argv):
+    # print(argv)
+    command=""
+    for i in range(len(argv)):
+        if i!=0:
+            if argv[i] != 'in':
+                command += argv[i] +' '
+            else :
+                command += '<'+argv[i]
+    start = time.time()
+    os.system(command)
+    end=time.time()
+    # print(command)
+    print(f"{end-start} s")
+if __name__ =='__main__':
+    # print(sys.argv)
+    main(sys.argv)
