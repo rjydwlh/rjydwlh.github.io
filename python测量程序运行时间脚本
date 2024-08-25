@@ -7,11 +7,13 @@ def main(argv):
     command=""
     for i in range(len(argv)):
         if i!=0:
-            if argv[i] != 'in':
+            # print(argv[i].find("in"))
+            if argv[i].find("in") == -1:
                 command += argv[i] +' '
             else :
-                command += '<'+argv[i]
+                command += ' '+'<'+argv[i]
     start = time.time()
+    # print(command)
     os.system(command)
     end=time.time()
     # print(command)
