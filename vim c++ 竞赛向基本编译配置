@@ -1,7 +1,0 @@
-set nu ru ts=4 sw=4 autoindent cindent smartindent mouse=a
-nmap <F9> <esc>:w<cr>:!g++ % -o %< -fsanitize=undefined -Wall -g
-nmap <C-F9> <esc>:w<cr>:!g++ % -o %< -Wall -O2
-nmap <F10> :!\time -f "\%M \%U" ./%<
-
-
-第一行 set 分别设置了 行号，光标位置，tab 相关（使用二缩进可以设为 2），缩进相关，使用鼠标F9 编译，C-F9 O2 编译，F10 运行！代表在终端输入，% 表示当前的文件名，-fsanitize=undefined 可以检查你的未定义行为（包括数组越界和爆 int 之类），-Wall 用来报错，-g 可以用 gdb 调试，\time 可以查看程序的运行内存和时间。
